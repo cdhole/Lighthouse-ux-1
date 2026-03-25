@@ -915,11 +915,11 @@ document.addEventListener('DOMContentLoaded',function(){
         <div class="breadcrumb"><span class="breadcrumb-link" onclick="openIntegrationsMenuFromBreadcrumb()">Integrations</span><span class="breadcrumb-sep">›</span><span class="breadcrumb-text">Discovery</span></div>
         <h1 class="domains-title">Discovery</h1>
       </div>
-      <div class="disc-tabs">
-        <div class="disc-tab" onclick="discSwitchTab(this)">On-Prem</div>
-        <div class="disc-tab" onclick="discSwitchTab(this)">Cloud</div>
-        <div class="disc-tab" onclick="discSwitchTab(this)">Third Party</div>
-        <div class="disc-tab active" onclick="discSwitchTab(this)">Integrations</div>
+      <div class="disc-tabs" role="tablist" aria-label="Discovery sources">
+        <div class="disc-tab" role="tab" aria-selected="false" tabindex="-1" onclick="discSwitchTab(this)">On-Prem</div>
+        <div class="disc-tab" role="tab" aria-selected="false" tabindex="-1" onclick="discSwitchTab(this)">Cloud</div>
+        <div class="disc-tab" role="tab" aria-selected="false" tabindex="-1" onclick="discSwitchTab(this)">Third Party</div>
+        <div class="disc-tab active" role="tab" aria-selected="true" tabindex="0" onclick="discSwitchTab(this)">Integrations</div>
       </div>
       <div class="disc-filter-bar">
         <div class="disc-filter-input-wrap">
