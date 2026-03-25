@@ -845,7 +845,7 @@ document.addEventListener('DOMContentLoaded',function(){
       </div>
     </div>
     <div class="domains-toolbar">
-      <div class="search-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input class="search-input" id="certSearch" type="text" placeholder="Search domain or issuer…" oninput="filterCerts()" maxlength="200" autocomplete="off"></div>
+      <div class="search-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input class="search-input" id="certSearch" type="text" aria-label="Search certificates by domain or issuer" placeholder="Search domain or issuer…" oninput="filterCerts()" maxlength="200" autocomplete="off"></div>
       <div class="toolbar-right">
         <div class="multi-select" id="certStatusMultiSelect">
           <div class="multi-select-btn" id="certStatusMsBtn" onclick="toggleCertStatusDropdown(event)"><span class="ms-placeholder">All statuses</span></div>
