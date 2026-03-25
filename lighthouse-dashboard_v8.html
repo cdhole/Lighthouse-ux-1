@@ -1303,8 +1303,8 @@ document.addEventListener('DOMContentLoaded',function(){
 
 <!-- Activity Panel -->
 <div class="panel-overlay" id="activityOverlay" onclick="activityOverlayClick(event)">
-  <div class="panel" id="activityPanel">
-    <div class="panel-header"><div><div class="panel-title">Activity</div><div class="panel-subtitle">Last 24 hours · all registrars</div></div><div class="panel-close" onclick="closeActivityPanel()">✕</div></div>
+  <div class="panel" id="activityPanel" role="dialog" aria-modal="true" aria-labelledby="activityPanelTitle">
+    <div class="panel-header"><div><div class="panel-title" id="activityPanelTitle">Activity</div><div class="panel-subtitle">Last 24 hours · all registrars</div></div><button class="panel-close" aria-label="Close Activity panel" onclick="closeActivityPanel()">✕</button></div>
     <div class="panel-body" style="padding:0">
       <div class="feed-list" style="padding:8px 20px">
         <div class="feed-item"><div class="feed-icon teal">✓</div><div class="feed-content"><div class="feed-title">Domain renewed: globaltech.io</div><div class="feed-sub">GoDaddy · 2-year renewal · auto-triggered</div></div><span class="feed-time">12m</span></div>
