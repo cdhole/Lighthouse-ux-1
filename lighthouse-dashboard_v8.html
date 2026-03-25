@@ -796,7 +796,7 @@ document.addEventListener('DOMContentLoaded',function(){
   <main class="domains-main" id="mainContent">
     <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap">
       <div class="domains-heading">
-        <div class="breadcrumb" id="domainBreadcrumb"><span class="breadcrumb-link" onclick="toggleNetworkMenu(event)">Network</span><span class="breadcrumb-sep">›</span><span class="breadcrumb-link" onclick="goToDashboard()">Domain Manager</span></div>
+        <nav class="breadcrumb" id="domainBreadcrumb" aria-label="Breadcrumb"><span class="breadcrumb-link" role="link" tabindex="0" onclick="toggleNetworkMenu(event)" onkeydown="if(event.key==='Enter'){toggleNetworkMenu(event);}">Network</span><span class="breadcrumb-sep" aria-hidden="true">›</span><span class="breadcrumb-link" role="link" tabindex="0" onclick="goToDashboard()" onkeydown="if(event.key==='Enter'){goToDashboard();}">Domain Manager</span></nav>
         <h1 class="domains-title" id="domainTitle">Domains <span style="font-weight:400;font-size:14px;color:var(--dim);margin-left:6px">2,847 domains</span></h1></div>
       <div style="display:flex;gap:8px;align-items:center">
         <div class="icon-btn primary" id="regDropdownBtn" onclick="toggleRegDropdown(event)">Registrar <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="white" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></div>
