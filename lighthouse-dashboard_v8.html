@@ -1158,8 +1158,8 @@ document.addEventListener('DOMContentLoaded',function(){
 
 <!-- Configure Discovery Panel -->
 <div class="panel-overlay" id="cdOverlay" onclick="cdOverlayClick(event)">
-  <div class="panel" id="cdPanel">
-    <div class="panel-header"><div><div class="panel-title">Configure Discovery</div></div><div class="panel-close" onclick="closeConfigDiscovery()">✕</div></div>
+  <div class="panel" id="cdPanel" role="dialog" aria-modal="true" aria-labelledby="cdPanelTitle">
+    <div class="panel-header"><div><div class="panel-title" id="cdPanelTitle">Configure Discovery</div></div><button class="panel-close" aria-label="Close Configure Discovery" onclick="closeConfigDiscovery()">✕</button></div>
     <div class="panel-body" style="overflow-y:auto;flex:1">
       <div class="form-section">
         <div class="form-row"><div class="form-label"><span style="color:#e53e3e">*</span>Provider Type</div>
