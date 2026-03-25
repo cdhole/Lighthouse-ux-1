@@ -1421,7 +1421,7 @@ document.addEventListener('DOMContentLoaded',function(){
 </div>
 
 <!-- Toast -->
-<div class="toast" id="toast"><span class="toast-icon">✓</span><span id="toastMsg"></span><span class="toast-link">View sync details →</span></div>
+<div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"><span class="toast-icon" aria-hidden="true">✓</span><span id="toastMsg"></span><button class="toast-link" aria-label="View sync details">View sync details →</button></div>
 
 <script>
 // ===== MENUS =====
