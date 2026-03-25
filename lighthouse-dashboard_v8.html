@@ -1345,8 +1345,8 @@ document.addEventListener('DOMContentLoaded',function(){
 
 <!-- Add Certificate Panel -->
 <div class="panel-overlay" id="addCertOverlay" onclick="addCertOverlayClick(event)">
-  <div class="panel" id="addCertPanel">
-    <div class="panel-header"><div><div class="panel-title">Add Certificate Authority</div><div class="panel-subtitle">Connect a new CA to manage certificates</div></div><div class="panel-close" onclick="closeAddCertPanel()">✕</div></div>
+  <div class="panel" id="addCertPanel" role="dialog" aria-modal="true" aria-labelledby="addCertPanelTitle">
+    <div class="panel-header"><div><div class="panel-title" id="addCertPanelTitle">Add Certificate Authority</div><div class="panel-subtitle">Connect a new CA to manage certificates</div></div><button class="panel-close" aria-label="Close Add Certificate Authority" onclick="closeAddCertPanel()">✕</button></div>
     <div class="panel-body">
       <div class="form-section">
         <div class="section-label"><div class="section-title">CA DETAILS</div></div>
