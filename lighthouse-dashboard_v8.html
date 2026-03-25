@@ -1370,8 +1370,8 @@ document.addEventListener('DOMContentLoaded',function(){
 
 <!-- Certificate Settings Panel -->
 <div class="panel-overlay" id="certSettingsOverlay" onclick="certSettingsOverlayClick(event)">
-  <div class="panel" id="certSettingsPanel">
-    <div class="panel-header"><div><div class="panel-title">Certificate Settings</div><div class="panel-subtitle">Global configuration for certificate authorities</div></div><div class="panel-close" onclick="closeCertSettingsPanel()">✕</div></div>
+  <div class="panel" id="certSettingsPanel" role="dialog" aria-modal="true" aria-labelledby="certSettingsPanelTitle">
+    <div class="panel-header"><div><div class="panel-title" id="certSettingsPanelTitle">Certificate Settings</div><div class="panel-subtitle">Global configuration for certificate authorities</div></div><button class="panel-close" aria-label="Close Certificate Settings" onclick="closeCertSettingsPanel()">✕</button></div>
     <div class="panel-body">
       <div class="form-section">
         <div class="section-label"><div class="section-title">CA CONFIG</div></div>
