@@ -563,6 +563,31 @@ html,body{font-size:15px}
 .src-badge.on-prem{color:var(--dim);font-weight:600;font-size:11px;letter-spacing:.06em}
 .ip-row-kebab{opacity:0;cursor:pointer;color:var(--muted);padding:2px 6px;border-radius:4px;font-size:16px;transition:opacity .15s;line-height:1}
 .ip-table tbody tr:hover .ip-row-kebab{opacity:1}
+/* ═══════════════════════════════════════════════════════
+   WCAG 2.2 AA — Accessibility
+   ═══════════════════════════════════════════════════════ */
+/* Screen-reader-only utility */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+/* Raise contrast on secondary/meta text (--muted #9ca3af → #6b7280) */
+.widget-meta,.expiry-type,.expiry-days,.alert-time,.feed-sub,.feed-time,.cert-days.ok,.profile-role{color:#6b7280;font-size:11px}
+.alert-sub{color:#6b7280}
+/* Fix widget-action: --accent #00b899 (2.3:1) → accent2 #2563eb (5.9:1) */
+.widget-action{color:#2563eb}
+.widget-action:hover{color:#1d4ed8;opacity:1}
+/* Fix warning text on white: #d97706 → #92400e (4.8:1) */
+.kpi-delta.down{background:rgba(220,38,38,0.1);color:#b91c1c}
+/* Fix disc-status-error: #e8521a → #c2410c (4.5:1 on white) */
+.disc-status-error{color:#c2410c!important;font-weight:600}
+/* Prefers-reduced-motion */
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+/* Ensure ip-row-kebab is keyboard-reachable (not opacity:0 hidden) */
+.ip-row-kebab:focus{opacity:1}
+/* Tooltip on focus too */
+[data-tip]:focus::after{opacity:1}
+/* Breadcrumb links */
+.breadcrumb-link{cursor:pointer}
+/* Radio group */
+[role="radiogroup"]{display:flex;flex-direction:column;gap:8px}
 </style>
 </head>
 <body>
