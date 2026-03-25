@@ -924,13 +924,13 @@ document.addEventListener('DOMContentLoaded',function(){
       <div class="disc-filter-bar">
         <div class="disc-filter-input-wrap">
           <input class="disc-filter-input" id="discFilterInput" type="text" placeholder="Filter and Search" oninput="filterDiscovery()" maxlength="200" autocomplete="off">
-          <div class="disc-filter-clear" onclick="document.getElementById('discFilterInput').value='';filterDiscovery()">✕</div>
-          <div class="disc-filter-sep"></div>
+          <button class="disc-filter-clear" aria-label="Clear filter" onclick="document.getElementById('discFilterInput').value='';filterDiscovery()">✕</button>
+          <div class="disc-filter-sep" role="separator" aria-hidden="true"></div>
           <button class="disc-apply-inline">Apply</button>
         </div>
-        <div class="disc-kebab-btn">⋮</div>
+        <button class="disc-kebab-btn" aria-label="More filter options">⋮</button>
       </div>
-      <div class="disc-saved-filters">Saved Filters</div>
+      <button class="disc-saved-filters" aria-label="Open saved filters">Saved Filters</button>
       <div class="disc-table-wrap">
       <table class="disc-table">
         <thead><tr>
