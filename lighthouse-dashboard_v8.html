@@ -1388,8 +1388,8 @@ document.addEventListener('DOMContentLoaded',function(){
 
 <!-- Settings Panel -->
 <div class="panel-overlay" id="settingsOverlay" onclick="settingsOverlayClick(event)">
-  <div class="panel" id="settingsPanel">
-    <div class="panel-header"><div><div class="panel-title">Registrar Settings</div><div class="panel-subtitle">Global configuration for domain registrars</div></div><div class="panel-close" onclick="closeSettingsPanel()">✕</div></div>
+  <div class="panel" id="settingsPanel" role="dialog" aria-modal="true" aria-labelledby="settingsPanelTitle">
+    <div class="panel-header"><div><div class="panel-title" id="settingsPanelTitle">Registrar Settings</div><div class="panel-subtitle">Global configuration for domain registrars</div></div><button class="panel-close" aria-label="Close Registrar Settings" onclick="closeSettingsPanel()">✕</button></div>
     <div class="panel-body">
       <div class="form-section">
         <div class="section-label"><div class="section-num">1</div><div class="section-title">Registrar Config</div></div>
