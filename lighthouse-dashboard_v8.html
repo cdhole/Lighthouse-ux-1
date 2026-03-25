@@ -1089,7 +1089,7 @@ document.addEventListener('DOMContentLoaded',function(){
 </div>
 
 <!-- Integrations Flyout -->
-<div class="kebab-menu" id="integrationsMenu" onclick="event.stopPropagation()" style="min-width:224px;padding:0;overflow-y:auto;border-radius:0 10px 10px 0;bottom:0;height:auto">
+<div class="kebab-menu" id="integrationsMenu" role="menu" aria-label="Integrations menu" onclick="event.stopPropagation()" style="min-width:224px;padding:0;overflow-y:auto;border-radius:0 10px 10px 0;bottom:0;height:auto">
   <div style="background:#cfd7d8;border-bottom:0.5px solid #bdbdbd">
     <div style="display:flex;align-items:center;gap:6px;padding:8px 8px 6px;font-family:Lato,sans-serif;font-size:14px;font-weight:700;color:#212121;cursor:pointer" onclick="event.stopPropagation();var s=this.nextElementSibling;var c=this.querySelector('span');if(s.style.display==='none'){s.style.display='';c.style.transform='rotate(0deg)';}else{s.style.display='none';c.style.transform='rotate(-90deg)';}"><span style="display:inline-flex;transition:transform .2s">▾</span> Sase Center/3rd Party</div>
     <div>
