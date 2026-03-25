@@ -1325,12 +1325,12 @@ document.addEventListener('DOMContentLoaded',function(){
 
 <!-- Domain Detail -->
 <div class="detail-overlay" id="detailOverlay" onclick="closeDetailOutside(event)">
-  <div class="detail-panel" id="detailPanel">
+  <div class="detail-panel" id="detailPanel" role="dialog" aria-modal="true" aria-labelledby="ddName">
     <div class="detail-topbar">
       <div class="detail-domain-info"><div class="detail-domain-name" id="ddName">—</div><div class="detail-domain-sub" id="ddSub">—</div></div>
       <div style="margin-left:auto;display:flex;align-items:center;gap:8px">
-        <div class="detail-nav-btn detail-view-mode-only" onclick="enterDetailEditMode()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Edit</div>
-        <div class="panel-close" onclick="closeDomainDetail()">✕</div>
+        <button class="detail-nav-btn detail-view-mode-only" onclick="enterDetailEditMode()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Edit</button>
+        <button class="panel-close" aria-label="Close domain detail" onclick="closeDomainDetail()">✕</button>
       </div>
     </div>
     <div class="detail-body">
