@@ -912,7 +912,7 @@ document.addEventListener('DOMContentLoaded',function(){
   <main class="domains-main" id="mainContent">
     <div style="display:flex;flex-direction:column;gap:8px">
       <div>
-        <div class="breadcrumb"><span class="breadcrumb-link" onclick="openIntegrationsMenuFromBreadcrumb()">Integrations</span><span class="breadcrumb-sep">›</span><span class="breadcrumb-text">Discovery</span></div>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><span class="breadcrumb-link" role="link" tabindex="0" onclick="openIntegrationsMenuFromBreadcrumb()" onkeydown="if(event.key==='Enter'){openIntegrationsMenuFromBreadcrumb();}">Integrations</span><span class="breadcrumb-sep" aria-hidden="true">›</span><span class="breadcrumb-text" aria-current="page">Discovery</span></nav>
         <h1 class="domains-title">Discovery</h1>
       </div>
       <div class="disc-tabs" role="tablist" aria-label="Discovery sources">
