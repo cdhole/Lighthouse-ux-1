@@ -884,7 +884,7 @@ document.addEventListener('DOMContentLoaded',function(){
   <main class="domains-main" id="mainContent">
     <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap">
       <div class="domains-heading">
-        <div class="breadcrumb"><span class="breadcrumb-link" onclick="toggleNetworkMenu(event)">Network</span><span class="breadcrumb-sep">›</span><span class="breadcrumb-link" onclick="goToDashboard()">Domain Manager</span></div>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><span class="breadcrumb-link" role="link" tabindex="0" onclick="toggleNetworkMenu(event)" onkeydown="if(event.key==='Enter'){toggleNetworkMenu(event);}">Network</span><span class="breadcrumb-sep" aria-hidden="true">›</span><span class="breadcrumb-link" role="link" tabindex="0" onclick="goToDashboard()" onkeydown="if(event.key==='Enter'){goToDashboard();}">Domain Manager</span></nav>
         <h1 class="domains-title">Registrars <span id="regListCount" style="font-weight:400;font-size:14px;color:var(--dim);margin-left:6px">12 registrars · 3 registrar types</span></h1></div>
       <div style="display:flex;gap:8px;align-items:center">
         <div class="icon-btn primary" onclick="openPanel()" data-tip="Connect a new registrar"><span style="font-size:15px;line-height:1;font-weight:900">+</span> Registrar</div>
