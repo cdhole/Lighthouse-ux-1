@@ -1259,9 +1259,9 @@ document.addEventListener('DOMContentLoaded',function(){
 
 <!-- Registrar Panel -->
 <div class="panel-overlay" id="panelOverlay" onclick="overlayClick(event)">
-  <div class="panel" id="panel">
-    <div class="panel-header"><div><div class="panel-title">Add Registrar</div><div class="panel-subtitle">Connect a new domain registrar to Lighthouse</div></div><div class="panel-close" onclick="closePanel()">✕</div></div>
-    <div class="panel-error" id="panelError">Couldn't save connector. Please try again or contact support.</div>
+  <div class="panel" id="panel" role="dialog" aria-modal="true" aria-labelledby="panelTitle">
+    <div class="panel-header"><div><div class="panel-title" id="panelTitle">Add Registrar</div><div class="panel-subtitle">Connect a new domain registrar to Lighthouse</div></div><button class="panel-close" aria-label="Close Add Registrar" onclick="closePanel()">✕</button></div>
+    <div class="panel-error" id="panelError" role="alert">Couldn't save connector. Please try again or contact support.</div>
     <div id="syncOverlay">
       <div class="sync-card">
         <div class="sync-spinner-wrap">
