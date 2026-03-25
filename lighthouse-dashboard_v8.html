@@ -956,18 +956,18 @@ document.addEventListener('DOMContentLoaded',function(){
   <div data-header></div>
   <div class="ip-sources-panel">
     <div class="ip-sources-title">Sources</div>
-    <div class="ip-source-item active" id="ipSrc-all" onclick="filterIPSource('all',this)">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v4m0 0-5 6m5-6 5 6"/></svg>All
-    </div>
-    <div class="ip-source-item" id="ipSrc-arin" onclick="filterIPSource('arin',this)">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v4m0 0-5 6m5-6 5 6"/></svg>ARIN
-    </div>
-    <div class="ip-source-item" id="ipSrc-apnic" onclick="filterIPSource('apnic',this)">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v4m0 0-5 6m5-6 5 6"/></svg>APNIC
-    </div>
-    <div class="ip-source-item" id="ipSrc-on-prem" onclick="filterIPSource('on-prem',this)">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v4m0 0-5 6m5-6 5 6"/></svg>On-Prem
-    </div>
+    <button class="ip-source-item active" id="ipSrc-all" aria-pressed="true" onclick="filterIPSource('all',this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v4m0 0-5 6m5-6 5 6"/></svg>All
+    </button>
+    <button class="ip-source-item" id="ipSrc-arin" aria-pressed="false" onclick="filterIPSource('arin',this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v4m0 0-5 6m5-6 5 6"/></svg>ARIN
+    </button>
+    <button class="ip-source-item" id="ipSrc-apnic" aria-pressed="false" onclick="filterIPSource('apnic',this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v4m0 0-5 6m5-6 5 6"/></svg>APNIC
+    </button>
+    <button class="ip-source-item" id="ipSrc-on-prem" aria-pressed="false" onclick="filterIPSource('on-prem',this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v4m0 0-5 6m5-6 5 6"/></svg>On-Prem
+    </button>
   </div>
   <main class="ip-main" id="mainContent">
     <div class="ip-header">
