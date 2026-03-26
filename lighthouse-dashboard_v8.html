@@ -923,7 +923,7 @@ document.addEventListener('DOMContentLoaded',function(){
       </div>
       <div class="disc-filter-bar">
         <div class="disc-filter-input-wrap">
-          <input class="disc-filter-input" id="discFilterInput" type="text" placeholder="Filter and Search" oninput="filterDiscovery()" maxlength="200" autocomplete="off">
+          <input class="disc-filter-input" id="discFilterInput" type="text" aria-label="Filter and search discovery integrations" placeholder="Filter and Search" oninput="filterDiscovery()" maxlength="200" autocomplete="off">
           <button class="disc-filter-clear" aria-label="Clear filter" onclick="document.getElementById('discFilterInput').value='';filterDiscovery()">✕</button>
           <div class="disc-filter-sep" role="separator" aria-hidden="true"></div>
           <button class="disc-apply-inline">Apply</button>
