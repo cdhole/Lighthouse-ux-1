@@ -894,7 +894,7 @@ document.addEventListener('DOMContentLoaded',function(){
     <div class="domains-toolbar">
       <div class="search-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input class="search-input" id="regSearch" type="text" aria-label="Search registrars" placeholder="Search registrars…" oninput="filterRegistrars()" maxlength="200" autocomplete="off"></div>
       <div class="toolbar-right">
-        <select class="t-select" id="regTypeFilter" onchange="filterRegistrars()"><option value="">All types</option><option value="Registrar">Registrar</option><option value="CA">CA</option><option value="RIR">RIR</option><option value="CLM">CLM</option></select>
+        <select class="t-select" id="regTypeFilter" aria-label="Filter by registrar type" onchange="filterRegistrars()"><option value="">All types</option><option value="Registrar">Registrar</option><option value="CA">CA</option><option value="RIR">RIR</option><option value="CLM">CLM</option></select>
         <select class="t-select" id="regStatusFilter" onchange="filterRegistrars()"><option value="">All statuses</option><option value="Active">Active</option><option value="Expiring">Expiring</option><option value="Inactive">Inactive</option></select>
       </div>
     </div>
