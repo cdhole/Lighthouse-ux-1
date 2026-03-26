@@ -588,6 +588,22 @@ html,body{font-size:15px}
 .breadcrumb-link{cursor:pointer}
 /* Radio group */
 [role="radiogroup"]{display:flex;flex-direction:column;gap:8px}
+/* Fix disc-tab inactive: #9ca3af (2.9:1 FAIL) → #6b7280 (4.77:1 PASS) */
+.disc-tab{color:#6b7280}
+/* IP sources panel label and range count */
+.ip-sources-title{color:#6b7280}
+.ip-group-count{color:#6b7280}
+/* kpi-delta.up: #059669 on green-tinted bg → #065f46 (6.3:1 PASS) */
+.kpi-delta.up{background:rgba(5,150,105,0.1);color:#065f46}
+/* badge.renewing: #d97706 on amber-tinted bg → #92400e (6.25:1 PASS) */
+.badge.renewing{color:#92400e;border-color:rgba(146,64,14,0.2)}
+/* badge.expiring: #e05252 on red-tinted bg → #b91c1c (5.73:1 PASS) */
+.badge.expiring{color:#b91c1c;border-color:rgba(185,28,28,0.2)}
+/* Pagination count text */
+#tableInfo,#certTableInfo,#regTableInfo{color:#6b7280}
+/* Normalize clear-btn and page-btn as native buttons */
+.clear-btn,.page-btn{font-family:'Lato',sans-serif;border:none;background:transparent;cursor:pointer}
+.page-btn{border:1px solid var(--border);background:var(--bg2)}
 </style>
 </head>
 <body>
