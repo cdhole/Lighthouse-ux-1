@@ -1811,6 +1811,9 @@ document.addEventListener('DOMContentLoaded',function(){
     t.setAttribute('tabindex','0');
     t.setAttribute('role','switch');
     t.setAttribute('aria-checked',t.classList.contains('on')?'true':'false');
+    // Associate label text from nearest toggle-label sibling
+    var row=t.closest('.toggle-row');
+    if(row){var lbl=row.querySelector('.toggle-label');if(lbl&&lbl.textContent){t.setAttribute('aria-label',lbl.textContent.trim());}}
     t.addEventListener('keydown',function(e){
       if(e.key==='Enter'||e.key===' '){e.preventDefault();t.click();t.setAttribute('aria-checked',t.classList.contains('on')?'true':'false');}
     });
