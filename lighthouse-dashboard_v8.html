@@ -1546,7 +1546,7 @@ function updateCertFilterHighlights(){
   if(stEl.value){stEl.style.borderColor='#3b7ef6';stEl.style.color='#3b7ef6';stEl.style.backgroundColor='rgba(59,126,246,0.06)';}
   else{stEl.style.borderColor='';stEl.style.color='';stEl.style.backgroundColor='';}
 }
-function sortCerts(k){if(certSortKey===k)certSortDir=certSortDir==='asc'?'desc':'asc';else{certSortKey=k;certSortDir='asc';}sortCertData();renderCerts();}
+function sortCerts(k){if(certSortKey===k)certSortDir=certSortDir==='asc'?'desc':'asc';else{certSortKey=k;certSortDir='asc';}sortCertData();renderCerts();syncAriaSortCols('#viewCerts',certSortKey,certSortDir);}
 function sortCertData(){filteredCerts.sort(function(a,b){var va,vb;if(certSortKey==='host'){va=a.host;vb=b.host;}else if(certSortKey==='issuer'){va=a.issuer;vb=b.issuer;}else if(certSortKey==='issued'){va=a.issued;vb=b.issued;}else if(certSortKey==='length'){va=parseInt(a.len);vb=parseInt(b.len);}else{va=a.days;vb=b.days;}return va<vb?certSortDir==='asc'?-1:1:va>vb?certSortDir==='asc'?1:-1:0;});}
 function toggleHideExpired(){hideExpiredOld=!hideExpiredOld;document.getElementById('hideExpiredBox').classList.toggle('checked',hideExpiredOld);filterCerts();}
 function goToCerts(){
