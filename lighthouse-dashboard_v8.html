@@ -1654,7 +1654,7 @@ function cdRunConnectionTest(){
 }
 function selectCdCredRadio(el){el.closest('div').querySelectorAll('.radio-item').forEach(function(r){r.classList.remove('on');});el.classList.add('on');}
 function openIntegrationsMenuFromBreadcrumb(){var fakeEvt={stopPropagation:function(){}};var el=document.querySelector('[data-nav="Integrations"]');toggleIntegrationsMenu(fakeEvt,el||document.body);}
-function discSwitchTab(el){el.closest('.disc-tabs').querySelectorAll('.disc-tab').forEach(function(t){t.classList.remove('active');});el.classList.add('active');}
+function discSwitchTab(el){el.closest('.disc-tabs').querySelectorAll('.disc-tab').forEach(function(t){t.classList.remove('active');t.setAttribute('aria-selected','false');t.setAttribute('tabindex','-1');});el.classList.add('active');el.setAttribute('aria-selected','true');el.setAttribute('tabindex','0');}
 function filterDiscovery(){var q=document.getElementById('discFilterInput').value.toLowerCase();document.querySelectorAll('#discTbody tr').forEach(function(r){r.style.display=r.textContent.toLowerCase().includes(q)?'':'none';});}
 
 // ===== DASHBOARD FILTERS =====
