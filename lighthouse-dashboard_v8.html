@@ -1771,6 +1771,39 @@ document.addEventListener('keydown',function(e){
 });
 
 document.addEventListener('DOMContentLoaded',function(){
+  // Flyout menu items: role=menuitem + keyboard access
+  document.querySelectorAll('[role="menu"] .kebab-menu-item').forEach(function(item){
+    item.setAttribute('role','menuitem');
+    if(!item.getAttribute('tabindex'))item.setAttribute('tabindex','0');
+    item.addEventListener('keydown',function(e){
+      if(e.key==='Enter'||e.key===' '){e.preventDefault();item.click();}
+      if(e.key==='ArrowDown'){e.preventDefault();var n=item.nextElementSibling;while(n&&n.getAttribute('role')!=='menuitem')n=n.nextElementSibling;if(n)n.focus();}
+      if(e.key==='ArrowUp'){e.preventDefault();var p=item.previousElementSibling;while(p&&p.getAttribute('role')!=='menuitem')p=p.previousElementSibling;if(p)p.focus();}
+    });
+  });
+  // KPI cards: keyboard access for clickable ones
+  document.querySelectorAll('.kpi-card[onclick],.kpi-value.clickable').forEach(function(el){
+    if(!el.getAttribute('tabindex')){
+      el.setAttribute('tabindex','0');
+      if(!el.getAttribute('role'))el.setAttribute('role','button');
+      el.addEventListener('keydown',function(e){
+        if(e.key==='Enter'||e.key===' '){e.preventDefault();el.click();}
+      });
+    }
+  });
+  // widget-action: keyboard access
+  document.querySelectorAll('.widget-action[onclick]').forEach(function(el){
+    el.setAttribute('tabindex','0');
+    el.setAttribute('role','button');
+    el.addEventListener('keydown',function(e){
+      if(e.key==='Enter'||e.key===' '){e.preventDefault();el.click();}
+    });
+  });
+  // multi-select-btn: aria-haspopup + aria-expanded
+  document.querySelectorAll('.multi-select-btn').forEach(function(btn){
+    if(!btn.getAttribute('aria-haspopup'))btn.setAttribute('aria-haspopup','listbox');
+    if(!btn.getAttribute('aria-expanded'))btn.setAttribute('aria-expanded','false');
+  });
   document.querySelectorAll('.toggle').forEach(function(t){
     t.setAttribute('tabindex','0');
     t.setAttribute('role','switch');
