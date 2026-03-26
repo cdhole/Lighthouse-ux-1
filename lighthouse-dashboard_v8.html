@@ -1224,7 +1224,7 @@ document.addEventListener('DOMContentLoaded',function(){
           </div>
           <div class="form-section">
             <div class="section-label"><div class="section-num">2</div><div class="section-title">Authentication</div></div>
-            <div class="form-row"><div class="form-label">API Key <span>*</span></div><div class="f-input-wrap"><input class="f-input" id="cdApiKey" type="password" placeholder="••••••••••••••••" oninput="cdCheckTestReady()" maxlength="256" autocomplete="new-password"><span class="f-eye" onclick="toggleFieldMask('cdApiKey')">👁</span></div></div>
+            <div class="form-row"><div class="form-label">API Key <span>*</span></div><div class="f-input-wrap"><input class="f-input" id="cdApiKey" type="password" placeholder="••••••••••••••••" oninput="cdCheckTestReady()" maxlength="256" autocomplete="new-password"><button class="f-eye" type="button" aria-label="Toggle API key visibility" onclick="toggleFieldMask('cdApiKey')">👁</button></div></div>
             <div class="form-row"><div class="form-label">API Secret <span>*</span></div><div class="f-input-wrap"><input class="f-input" id="cdApiSecret" type="password" placeholder="••••••••••••••••" oninput="cdCheckTestReady()" maxlength="256" autocomplete="new-password"><span class="f-eye" onclick="toggleFieldMask('cdApiSecret')">👁</span></div></div>
             <div class="test-row"><button class="btn-test" id="cdTestBtn" disabled onclick="cdRunConnectionTest()"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Test connection</button><div class="test-status" id="cdTestStatus"></div></div>
           </div>
