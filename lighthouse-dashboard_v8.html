@@ -1431,8 +1431,8 @@ function toggleNetworkMenu(e){e.stopPropagation();var m=document.getElementById(
 function closeNetworkMenu(){document.getElementById('networkMenu').classList.remove('open');clearNavHighlight();var btn=document.querySelector('[data-nav="Network"]');if(btn)btn.setAttribute('aria-expanded','false');}
 function toggleIntegrationsMenu(e){e.stopPropagation();var m=document.getElementById('integrationsMenu');if(m.classList.contains('open')){closeIntegrationsMenu();return;}closeNetworkMenu();m.style.left='72px';m.style.top='56px';m.style.bottom='0';m.classList.add('open');setNavHighlight('Integrations');var btn=document.querySelector('[data-nav="Integrations"]');if(btn)btn.setAttribute('aria-expanded','true');}
 function closeIntegrationsMenu(){document.getElementById('integrationsMenu').classList.remove('open');clearNavHighlight();var btn=document.querySelector('[data-nav="Integrations"]');if(btn)btn.setAttribute('aria-expanded','false');}
-function toggleRegDropdown(e){e.stopPropagation();var m=document.getElementById('regDropdownMenu');if(m.classList.contains('open')){closeRegDropdown();return;}m.classList.add('open');var r=document.getElementById('regDropdownBtn').getBoundingClientRect();m.style.left=r.left+'px';m.style.top=(r.bottom+4)+'px';}
-function closeRegDropdown(){document.getElementById('regDropdownMenu').classList.remove('open');}
+function toggleRegDropdown(e){e.stopPropagation();var m=document.getElementById('regDropdownMenu');if(m.classList.contains('open')){closeRegDropdown();return;}m.classList.add('open');var r=document.getElementById('regDropdownBtn').getBoundingClientRect();m.style.left=r.left+'px';m.style.top=(r.bottom+4)+'px';document.getElementById('regDropdownBtn').setAttribute('aria-expanded','true');}
+function closeRegDropdown(){document.getElementById('regDropdownMenu').classList.remove('open');var btn=document.getElementById('regDropdownBtn');if(btn)btn.setAttribute('aria-expanded','false');}
 
 // ===== CERTS =====
 var CERTS=[
