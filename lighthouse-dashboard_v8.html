@@ -979,7 +979,7 @@ document.addEventListener('DOMContentLoaded',function(){
     </div>
     <div class="disc-filter-bar">
       <div class="disc-filter-input-wrap">
-        <input class="disc-filter-input" type="text" placeholder="Filter and Search" oninput="filterIPTable(this.value)" id="ipFilterInput" maxlength="200" autocomplete="off">
+        <input class="disc-filter-input" type="text" aria-label="Filter and search IP ranges" placeholder="Filter and Search" oninput="filterIPTable(this.value)" id="ipFilterInput" maxlength="200" autocomplete="off">
         <button class="disc-filter-clear" aria-label="Clear filter" onclick="document.getElementById('ipFilterInput').value='';filterIPTable('')">✕</button>
         <div class="disc-filter-sep" role="separator" aria-hidden="true"></div>
         <button class="disc-apply-inline">Apply</button>
