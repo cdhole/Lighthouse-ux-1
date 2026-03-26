@@ -681,7 +681,7 @@ document.addEventListener('DOMContentLoaded',function(){
     <div class="filter-chip" style="--chip-color:var(--accent2);border-color:var(--accent2);background:var(--accent2);cursor:pointer;padding:5px 14px" onclick="openPanel()"><span class="chip-name" style="color:#fff;font-weight:700">+ Registrar</span></div>
     <div class="filter-chip" style="--chip-color:var(--dim);cursor:pointer;padding:5px 10px;display:inline-flex;align-items:center;gap:0" title="Activity" onclick="openActivityPanel()"><span style="display:flex;align-items:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--dim)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span></div>
     <div class="filter-divider"></div>
-    <span class="clear-btn" id="clearBtn" onclick="clearFilters()">✕ Clear filters</span>
+    <button class="clear-btn" id="clearBtn" onclick="clearFilters()" aria-label="Clear all filters">✕ Clear filters</button>
   </div>
   <main class="main" id="mainContent">
     <!-- KPI ROW -->
