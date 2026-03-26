@@ -629,10 +629,10 @@ function sidebarHTML(activeItem,onDashClick){
     {name:'Help',icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><circle cx="12" cy="17" r=".5" fill="currentColor"/></svg>'},
     {name:'Resources',icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v3m0 12v3M5.5 8L3 6.5M21 17.5 18.5 16M5.5 16 3 17.5M21 6.5 18.5 8"/><rect x="8" y="8" width="8" height="8" rx="1"/></svg>'}
   ];
-  var h='<aside class="sidebar"><div class="nav-section">';
-  items.forEach(function(it){var isActive=it.name===activeItem;var cls=isActive?' active page-active':'';var oc=it.click?' onclick="'+it.click+'"':'';h+='<div class="nav-item'+cls+'" data-nav="'+it.name+'" tabindex="0" role="button"'+oc+' onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();this.click();}">'+it.icon+it.name+'</div>';});
+  var h='<aside class="sidebar" aria-label="Main navigation"><div class="nav-section">';
+  items.forEach(function(it){var isActive=it.name===activeItem;var cls=isActive?' active page-active':'';var oc=it.click?' onclick="'+it.click+'"':'';var hp=it.hasMenu?' aria-haspopup="menu" aria-expanded="false"':'';h+='<div class="nav-item'+cls+'" data-nav="'+it.name+'" tabindex="0" role="button"'+oc+hp+' onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();this.click();}">'+it.icon+it.name+'</div>';});
   h+='</div><div class="nav-section bottom">';
-  bottom.forEach(function(it){h+='<div class="nav-item" tabindex="0" role="button" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();this.click();}">'+it.icon+it.name+'</div>';});
+  bottom.forEach(function(it){h+='<div class="nav-item" tabindex="0" role="button" aria-label="'+it.name+'" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();this.click();}">'+it.icon+it.name+'</div>';});
   h+='</div></aside>';return h;
 }
 function headerHTML(){
