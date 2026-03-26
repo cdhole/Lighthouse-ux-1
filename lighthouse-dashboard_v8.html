@@ -428,10 +428,9 @@ td.renew-cell.off{color:var(--muted)}
 .test-status.success{color:var(--success)}.test-status.error{color:var(--danger)}.test-status.testing{color:var(--dim)}
 .spin-sm{width:12px;height:12px;border:2px solid currentColor;border-top-color:transparent;border-radius:50%;animation:spin .7s linear infinite;display:inline-block}
 @keyframes spin{to{transform:rotate(360deg)}}
-.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(80px);z-index:300;background:var(--bg2);border:1px solid var(--border-bright);border-radius:10px;padding:12px 20px;font-size:13px;color:var(--text);display:flex;align-items:center;gap:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);transition:transform .35s cubic-bezier(.4,0,.2,1),opacity .35s;opacity:0;white-space:nowrap}
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(80px);z-index:300;background:#06633e;border:none;border-radius:10px;padding:12px 20px;font-size:13px;color:#fff;display:flex;align-items:center;gap:10px;box-shadow:0 8px 24px rgba(0,0,0,.18);transition:transform .35s cubic-bezier(.4,0,.2,1),opacity .35s;opacity:0;white-space:nowrap}
 .toast.show{transform:translateX(-50%) translateY(0);opacity:1}
-.toast-icon{color:var(--success);font-size:15px}
-.toast-link{font-family:var(--fm);font-size:10px;color:var(--accent);cursor:pointer;margin-left:8px;opacity:.8}
+.toast-icon{color:#fff;font-size:15px;font-weight:700}
 .cert-host{font-family:var(--fb);font-size:12px;color:var(--text);font-weight:400}
 .cert-issuer{color:var(--dim);font-size:12px;max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .cert-date{font-family:var(--fm);font-size:12px;color:var(--dim);white-space:nowrap;text-align:right}
