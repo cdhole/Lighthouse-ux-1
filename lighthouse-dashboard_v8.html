@@ -1566,6 +1566,16 @@ function goToCerts(){
   certPage=1;
   filterCerts();
 }
+function goToCertsExpiring30(){
+  document.querySelectorAll('.view').forEach(function(v){v.classList.remove('active');});
+  document.getElementById('viewCerts').classList.add('active');
+  setCertStatusSelections(['expiring']);
+  setCertExpirySelections(['30']);
+  document.getElementById('certSearch').value='';
+  hideExpiredOld=false;
+  certPage=1;
+  filterCerts();
+}
 
 // ===== REGISTRARS =====
 var REGISTRARS=[{name:'GoDaddy',type:'Registrar',domains:1284,auth:'API Key + Secret',owner:'Druce MacFarlane',status:'Active',synced:'3/20/2026, 9:14 AM',color:'var(--accent)'},{name:'Namecheap',type:'Registrar',domains:892,auth:'API Key',owner:'Rishabh Parmar',status:'Active',synced:'3/20/2026, 9:12 AM',color:'var(--accent2)'},{name:'Verisign',type:'Registrar',domains:671,auth:'API Token',owner:'NetOps Team',status:'Active',synced:'3/20/2026, 8:55 AM',color:'var(--purple)'},{name:'DigiCert',type:'CA',domains:621,auth:'API Key',owner:'Security Team',status:'Active',synced:'3/20/2026, 9:10 AM',color:'var(--warn)'},{name:"Let's Encrypt",type:'CA',domains:782,auth:'ACME',owner:'Platform Engineering',status:'Active',synced:'3/20/2026, 9:08 AM',color:'var(--success)'},{name:'ARIN',type:'RIR',domains:184,auth:'API Key',owner:'NetOps Team',status:'Expiring',synced:'3/19/2026, 4:30 PM',color:'var(--danger)'},{name:'Venafi',type:'CLM',domains:184,auth:'OAuth 2.0',owner:'Security Team',status:'Active',synced:'3/20/2026, 8:45 AM',color:'#db2777'},{name:'Hover',type:'Registrar',domains:44,auth:'OAuth 2.0',owner:'Druce MacFarlane',status:'Active',synced:'3/20/2026, 7:30 AM',color:'#8b5cf6'},{name:'Domains.com',type:'Registrar',domains:312,auth:'API Key',owner:'Rishabh Parmar',status:'Active',synced:'3/19/2026, 11:20 PM',color:'#06b6d4'},{name:'Sectigo',type:'CA',domains:245,auth:'API Key',owner:'Security Team',status:'Active',synced:'3/20/2026, 6:15 AM',color:'#f59e0b'},{name:'RIPE NCC',type:'RIR',domains:67,auth:'API Token',owner:'NetOps Team',status:'Inactive',synced:'3/15/2026, 2:00 PM',color:'#64748b'},{name:'Entrust',type:'CA',domains:198,auth:'API Key',owner:'Platform Engineering',status:'Active',synced:'3/20/2026, 8:00 AM',color:'#0ea5e9'}];
