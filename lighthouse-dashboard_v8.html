@@ -1494,9 +1494,11 @@ function renderCertPager(total){
   wrap.innerHTML='';
   if(pages<=1)return;
   function addBtn(label,pg){
-    var b=document.createElement('div');
+    var b=document.createElement('button');
+    b.type='button';
     b.className='page-btn';
     b.textContent=label;
+    b.setAttribute('aria-label',label==='‹'?'Previous page':'Next page');
     b.onclick=function(){if(pg>=1&&pg<=pages){certPage=pg;renderCerts();}};
     wrap.appendChild(b);
   }
