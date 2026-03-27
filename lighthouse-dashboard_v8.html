@@ -306,14 +306,16 @@ td.renew-cell.off{color:var(--muted)}
 .group-info-val{font-family:var(--fm);font-size:11px;color:var(--text);font-weight:500}
 .group-kebab-btn{background:none;border:none;cursor:pointer;font-size:16px;color:var(--dim);padding:2px 8px;border-radius:6px;line-height:1;flex-shrink:0;font-family:var(--fm)}
 .group-kebab-btn:hover{background:var(--bg4);color:var(--text)}
-.cell-tip-wrap{position:relative;display:inline-flex;align-items:center;cursor:default}
+.cell-tip-wrap{position:relative;display:inline-flex;align-items:center;cursor:help}
 .ctip{display:none;position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);background:#1f2937;color:#f9fafb;font-size:11px;line-height:1.85;padding:9px 14px;border-radius:8px;white-space:nowrap;z-index:700;pointer-events:none;box-shadow:0 4px 16px rgba(0,0,0,0.35);text-align:left}
 .cell-tip-wrap:hover .ctip{display:block}
 .ctip-name{font-size:12px;font-weight:700;color:#fff;padding-bottom:5px;border-bottom:1px solid rgba(255,255,255,0.14);margin-bottom:5px;display:block}
 .ctip-row{display:flex;gap:10px;align-items:baseline}
 .ctip-lbl{font-size:9px;color:rgba(255,255,255,0.5);font-weight:700;letter-spacing:.07em;text-transform:uppercase;min-width:48px;flex-shrink:0}
 .ctip-ns{display:block;color:rgba(255,255,255,0.85);font-family:'DM Mono',monospace;font-size:10.5px}
-.ns-count-badge{font-family:var(--fm);font-size:12px;font-weight:700;color:var(--accent2);background:rgba(59,126,246,0.08);border:1px solid rgba(59,126,246,0.18);padding:1px 9px;border-radius:4px;cursor:default}
+.ns-count-badge{font-family:var(--fm);font-size:12px;font-weight:700;color:var(--accent2);background:rgba(59,126,246,0.08);border:1px solid rgba(59,126,246,0.18);padding:1px 9px;border-radius:4px;cursor:help;transition:background .15s,border-color .15s}
+.cell-tip-wrap:hover .ns-count-badge{background:rgba(59,126,246,0.18);border-color:rgba(59,126,246,0.4)}
+.cell-tip-wrap:hover .contact-name{text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px;color:var(--accent2)}
 .group-meta{margin-left:auto;display:flex;align-items:center;gap:10px}
 .group-meta-item{font-family:var(--fm);font-size:10px;color:var(--muted)}
 .group-meta-item span{color:var(--danger);font-weight:700}
